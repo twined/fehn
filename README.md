@@ -1,3 +1,10 @@
+## Build and update hub image
+
+```
+$ docker build -t twined/fehn:1.0 .
+$ docker push twined/fehn:1.0
+```
+
 ## Example Dockerfile
 
 ```
