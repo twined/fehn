@@ -1,7 +1,7 @@
 FROM phusion/baseimage:0.9.18
 
 MAINTAINER Twined Networks <mail@twined.net>
-ENV REFRESHED_AT 2016-05-05
+ENV REFRESHED_AT 2016-05-19
 
 RUN echo /root > /etc/container_environment/HOME
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
