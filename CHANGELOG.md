@@ -1,3 +1,8 @@
+## v1.3 (2016-08-09)
+
+- updated Elixir to v1.3.0
+- updated Hex to v0.13.0
+
 ## v1.2 (2016-06-27)
 
 - updated Elixir to v1.3.0
