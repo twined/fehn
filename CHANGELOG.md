@@ -1,3 +1,9 @@
+## v1.4 (2016-09-15)
+
+- updated Ubuntu to 16.04.
+  Make sure you don't build for environments < 16.04!
+- updated Node to 6.x
+
 ## v1.3 (2016-08-09)
 
 - updated Elixir to v1.3.0

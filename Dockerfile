@@ -19,14 +19,17 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN echo "deb http://packages.erlang-solutions.com/ubuntu trusty contrib" >> /etc/apt/sources.list && \
     apt-key adv --fetch-keys http://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc && \
-    curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && \
+
     apt-get -qq update && apt-get install -y \
     esl-erlang \
     git \
     unzip \
     build-essential \
     wget \
-    nodejs && \
+    sudo
+
+RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && \
+    apt-get -qq update && apt-get install -y nodejs && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Download and Install Specific Version of Elixir
