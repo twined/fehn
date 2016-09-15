@@ -1,7 +1,7 @@
-FROM phusion/baseimage:0.9.18
+FROM phusion/baseimage:0.9.19
 
 MAINTAINER Twined Networks <mail@twined.net>
-ENV REFRESHED_AT 2016-08-09
+ENV REFRESHED_AT 2016-09-15
 
 RUN echo /root > /etc/container_environment/HOME
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
@@ -19,7 +19,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN echo "deb http://packages.erlang-solutions.com/ubuntu trusty contrib" >> /etc/apt/sources.list && \
     apt-key adv --fetch-keys http://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc && \
-    curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash - && \
+    curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && \
     apt-get -qq update && apt-get install -y \
     esl-erlang \
     git \
