@@ -5,11 +5,18 @@ $ docker build -t twined/fehn:1.0 .
 $ docker push twined/fehn:1.0
 ```
 
+## Ubuntu versions
+
+```
+1.3 and below - Ubuntu 14.04
+1.4 and up    - Ubuntu 16.04
+```
+
 ## Example Dockerfile
 
 ```
 
-FROM twined/fehn:latest
+FROM twined/fehn:1.3
 
 MAINTAINER Twined Networks <mail@twined.net>
 
