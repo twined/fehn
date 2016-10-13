@@ -15,8 +15,7 @@ $ docker push twined/fehn:1.0
 ## Example Dockerfile
 
 ```
-
-FROM twined/fehn:1.3
+FROM twined/fehn:1.3.1
 
 MAINTAINER Twined Networks <mail@twined.net>
 
@@ -30,11 +29,11 @@ RUN mix deps.clean --all
 RUN mix deps.get
 RUN mix deps.compile
 
-RUN npm install
+COPY package.json yarn.lock /app/
+RUN yarn --pure-lockfile
 RUN node_modules/.bin/brunch build -p
 
 RUN mix phoenix.digest
 RUN mix compile
 RUN mix release --verbosity=verbose
-
 ```
