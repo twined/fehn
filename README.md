@@ -15,12 +15,12 @@ $ docker push twined/fehn:1.0
 ## Example Dockerfile
 
 ```
-FROM twined/fehn:1.3.1
+FROM twined/fehn:1.3.4
 
 MAINTAINER Twined Networks <mail@twined.net>
 
-COPY . /app
-WORKDIR /app
+COPY . /opt/app
+WORKDIR /opt/app
 
 ENV MIX_ENV prod
 
@@ -29,7 +29,7 @@ RUN mix deps.clean --all
 RUN mix deps.get
 RUN mix deps.compile
 
-COPY package.json yarn.lock /app/
+COPY package.json yarn.lock /opt/app/
 RUN yarn --pure-lockfile
 RUN node_modules/.bin/brunch build -p
 

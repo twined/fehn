@@ -1,3 +1,12 @@
+## v1.3.4 (2017-01-25)
+- update yarn to 0.19.1
+
+## v1.3.3 (2017-01-10)
+
+- updated Elixir to v1.4.0
+- updated Erlang to v19.2
+- updated Hex to v0.15.0
+
 ## v1.3 (2016-08-09)
 
 - updated Elixir to v1.3.0
