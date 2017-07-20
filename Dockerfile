@@ -1,7 +1,7 @@
-FROM phusion/baseimage:0.9.19
+FROM phusion/baseimage:0.9.22
 
 MAINTAINER Twined Networks <mail@twined.net>
-ENV REFRESHED_AT 2016-09-15
+ENV REFRESHED_AT 2017-07-20
 
 RUN echo /root > /etc/container_environment/HOME
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
@@ -28,13 +28,15 @@ RUN echo "deb http://packages.erlang-solutions.com/ubuntu trusty contrib" >> /et
     wget \
     sudo
 
-RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && \
     apt-get -qq update && apt-get install -y nodejs && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN npm install yarn -g --no-progress
+
 # Download and Install Specific Version of Elixir
 WORKDIR /elixir
-RUN wget -q https://github.com/elixir-lang/elixir/releases/download/v1.3.2/Precompiled.zip && \
+RUN wget -q https://github.com/elixir-lang/elixir/releases/download/v1.4.5/Precompiled.zip && \
     unzip Precompiled.zip && \
     rm -f Precompiled.zip && \
     ln -s /elixir/bin/elixirc /usr/local/bin/elixirc && \
