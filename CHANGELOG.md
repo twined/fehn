@@ -1,4 +1,8 @@
-## v1.4 (2016-09-15)
+## v1.5 (2017-08-06)
+
+- updated Elixir to 1.5.1
+
+## v1.4 (2017-07-21)
 
 - updated Elixir to 1.4.5
 - updated Ubuntu to 16.04.

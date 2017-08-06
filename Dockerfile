@@ -1,7 +1,9 @@
 FROM phusion/baseimage:0.9.22
 
 MAINTAINER Twined Networks <mail@twined.net>
-ENV REFRESHED_AT 2017-07-20
+ENV REFRESHED_AT 2017-08-06
+
+ENV ELIXIR_VERSION 1.5.1
 
 RUN echo /root > /etc/container_environment/HOME
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
@@ -36,7 +38,7 @@ RUN npm install yarn -g --no-progress
 
 # Download and Install Specific Version of Elixir
 WORKDIR /elixir
-RUN wget -q https://github.com/elixir-lang/elixir/releases/download/v1.4.5/Precompiled.zip && \
+RUN wget -q https://github.com/elixir-lang/elixir/releases/download/v${ELIXIR_VERSION}/Precompiled.zip && \
     unzip Precompiled.zip && \
     rm -f Precompiled.zip && \
     ln -s /elixir/bin/elixirc /usr/local/bin/elixirc && \
