@@ -1,3 +1,7 @@
+## v1.6 (2017-08-10)
+
+- updated Node to 8.3
+
 ## v1.5 (2017-08-06)
 
 - updated Elixir to 1.5.1
