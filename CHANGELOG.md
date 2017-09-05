@@ -1,3 +1,7 @@
+## v1.3.5 (2017-09-05)
+- update Elixir to 1.5.1
+- update Erlang to v20
+
 ## v1.3.4 (2017-01-25)
 - update yarn to 0.19.1
 
