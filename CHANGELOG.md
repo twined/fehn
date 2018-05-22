@@ -1,3 +1,7 @@
+## v1.3.6 (2018-04-16)
+- update Elixir to 1.6.4
+- update Node to v9
+
 ## v1.3.5 (2017-09-05)
 - update Elixir to 1.5.1
 - update Erlang to v20
