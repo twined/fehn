@@ -1,9 +1,9 @@
-FROM phusion/baseimage:0.9.22
+FROM phusion/baseimage:0.10.1
 
 MAINTAINER Twined Networks <mail@twined.net>
-ENV REFRESHED_AT 2017-08-12
+ENV REFRESHED_AT 2018-05-22
 
-ENV ELIXIR_VERSION 1.5.1
+ENV ELIXIR_VERSION 1.6.5
 
 RUN echo /root > /etc/container_environment/HOME
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
@@ -21,7 +21,6 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN echo "deb http://packages.erlang-solutions.com/ubuntu trusty contrib" >> /etc/apt/sources.list && \
     apt-key adv --fetch-keys http://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc && \
-
     apt-get -qq update && apt-get install -y \
     esl-erlang \
     git \
@@ -30,7 +29,7 @@ RUN echo "deb http://packages.erlang-solutions.com/ubuntu trusty contrib" >> /et
     wget \
     sudo
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash - && \
     apt-get -qq update && apt-get install -y nodejs && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
