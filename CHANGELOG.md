@@ -1,3 +1,13 @@
+## v1.9 (2018-07-29)
+
+- updated Elixir to 1.7.1
+- updated Erlang to 21.0.4
+
+## v1.8 (2018-07-08)
+
+- updated Elixir to 1.6.6
+- updated Erlang to 21.0.2
+
 ## v1.7 (2018-05-22)
 
 - updated Elixir to 1.6.5
