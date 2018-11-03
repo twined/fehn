@@ -1,9 +1,9 @@
 FROM phusion/baseimage:0.10.1
 
 MAINTAINER Twined Networks <mail@twined.net>
-ENV REFRESHED_AT 2018-07-29
+ENV REFRESHED_AT 2018-11-02
 
-ENV ELIXIR_VERSION 1.7.1
+ENV ELIXIR_VERSION 1.7.4
 
 RUN echo /root > /etc/container_environment/HOME
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
