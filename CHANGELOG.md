@@ -1,6 +1,6 @@
 ## v1.9 (2018-11-02)
 
-- updated Elixir to 1.7.1
+- updated Elixir to 1.7.4
 - updated Erlang to 21.1
 - updated Hex to 0.18.1
 
