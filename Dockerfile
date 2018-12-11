@@ -1,7 +1,7 @@
 FROM phusion/baseimage:0.9.18
 
-MAINTAINER Twined Networks <mail@twined.net>
-ENV REFRESHED_AT 2018-04-16
+LABEL maintainer="mail@twined.net"
+ENV REFRESHED_AT 2018-12-11
 
 RUN echo /root > /etc/container_environment/HOME
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
@@ -34,7 +34,7 @@ RUN echo "deb http://packages.erlang-solutions.com/ubuntu trusty contrib" >> /et
 
 # Download and Install Specific Version of Elixir
 WORKDIR /elixir
-RUN wget -q https://github.com/elixir-lang/elixir/releases/download/v1.6.4/Precompiled.zip && \
+RUN wget -q https://github.com/elixir-lang/elixir/releases/download/v1.7.4/Precompiled.zip && \
     unzip Precompiled.zip && \
     rm -f Precompiled.zip && \
     ln -s /elixir/bin/elixirc /usr/local/bin/elixirc && \
