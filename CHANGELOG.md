@@ -1,3 +1,9 @@
+## v1.10 (2019-01-15)
+- updated Elixir to 1.8.0
+- updated Erlang to 21.2
+- updated Node to 11.X
+- updated Hex to 0.18.2
+
 ## v1.9 (2018-11-02)
 
 - updated Elixir to 1.7.4

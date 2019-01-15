@@ -1,9 +1,9 @@
 FROM phusion/baseimage:0.10.1
 
 MAINTAINER Twined Networks <mail@twined.net>
-ENV REFRESHED_AT 2018-11-02
+ENV REFRESHED_AT 2019-01-15
 
-ENV ELIXIR_VERSION 1.7.4
+ENV ELIXIR_VERSION 1.8.0
 
 RUN echo /root > /etc/container_environment/HOME
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
@@ -29,7 +29,7 @@ RUN echo "deb http://packages.erlang-solutions.com/ubuntu trusty contrib" >> /et
     wget \
     sudo
 
-RUN curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash - && \
     apt-get -qq update && apt-get install -y nodejs && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
