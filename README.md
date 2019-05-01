@@ -10,6 +10,7 @@ $ docker push twined/fehn:1.10
 ```
 1.3 and below - Ubuntu 14.04
 1.4 and up    - Ubuntu 16.04
+2.X           - Ubuntu 18.04
 ```
 
 ## Example Dockerfile
