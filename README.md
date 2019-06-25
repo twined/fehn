@@ -1,8 +1,8 @@
 ## Build and update hub image
 
 ```
-$ docker build -t twined/fehn:2.0 .
-$ docker push twined/fehn:2.0
+$ docker build -t twined/fehn:2.1 .
+$ docker push twined/fehn:2.1
 ```
 
 ## Ubuntu versions
@@ -17,7 +17,7 @@ $ docker push twined/fehn:2.0
 
 ```
 
-FROM twined/fehn:2.0
+FROM twined/fehn:2.1
 
 MAINTAINER Twined Networks <mail@twined.net>
 

@@ -1,3 +1,7 @@
+## v2.1 (2019-06-25)
+- updated Elixir to 1.9
+- updated Erlang to 22.0
+
 ## v2.00 (2019-05-01)
 - Ubuntu 18.04
 - updated Elixir to 1.8.1
