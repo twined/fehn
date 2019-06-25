@@ -1,3 +1,8 @@
+## v2.00 (2019-05-01)
+- Ubuntu 18.04
+- updated Elixir to 1.8.1
+- remove Node
+
 ## v1.10 (2019-01-15)
 - updated Elixir to 1.8.0
 - updated Erlang to 21.2
