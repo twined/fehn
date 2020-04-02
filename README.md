@@ -1,8 +1,8 @@
 ## Build and update hub image
 
 ```
-$ docker build -t twined/fehn:2.1 .
-$ docker push twined/fehn:2.1
+$ docker build -t twined/fehn:2.3 .
+$ docker push twined/fehn:2.3
 ```
 
 ## Ubuntu versions
@@ -17,25 +17,32 @@ $ docker push twined/fehn:2.1
 
 ```
 
-FROM twined/fehn:2.1
+FROM twined/fehn:2.3
 
-MAINTAINER Twined Networks <mail@twined.net>
+LABEL maintainer="Univers Agency <mail@univers.agency>"
 
-COPY . /app
-WORKDIR /app
-
+WORKDIR /opt/app
 ENV MIX_ENV prod
 
-RUN mix clean
-RUN mix deps.clean --all
+# build deps
+COPY mix.exs mix.lock ./
+COPY config config
 RUN mix deps.get
 RUN mix deps.compile
 
-RUN npm install
-RUN node_modules/.bin/brunch build -p
-
-RUN mix phoenix.digest
+# build app
+COPY lib lib
+COPY test test
+COPY rel rel
+COPY priv/gettext priv/gettext
+COPY priv/repo priv/repo
 RUN mix compile
-RUN mix release --verbosity=verbose
+
+COPY --from=frontend_builder /opt/app/priv/static/ priv/static/
+COPY --from=backend_builder /opt/app/priv/static/ priv/static/
+
+RUN mix phx.digest
+RUN mix distillery.release
+
 
 ```

@@ -1,9 +1,9 @@
 FROM phusion/baseimage:0.11
 
-LABEL maintainer="Twined Networks <mail@twined.net>"
-ENV REFRESHED_AT 2019-06-25
+LABEL maintainer="Univers Agency <mail@univers.agency>"
+ENV REFRESHED_AT 2020-02-11
 
-ENV ELIXIR_VERSION 1.9.0
+ENV ELIXIR_VERSION 1.10.1
 
 RUN echo /root > /etc/container_environment/HOME
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
