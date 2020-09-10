@@ -1,8 +1,8 @@
 ## Build and update hub image
 
 ```
-$ docker build -t twined/fehn:2.5 .
-$ docker push twined/fehn:2.5
+$ docker build -t twined/fehn:3.0 .
+$ docker push twined/fehn:3.0
 ```
 
 ## Ubuntu versions
@@ -11,13 +11,14 @@ $ docker push twined/fehn:2.5
 1.3 and below - Ubuntu 14.04
 1.4 and up    - Ubuntu 16.04
 2.X           - Ubuntu 18.04
+3.X           - Ubuntu 20.04
 ```
 
 ## Example Dockerfile
 
 ```
 
-FROM twined/fehn:2.5
+FROM twined/fehn:3.0
 
 LABEL maintainer="Univers Agency <mail@univers.agency>"
 
