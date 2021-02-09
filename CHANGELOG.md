@@ -1,3 +1,7 @@
+## v2.6 (2021-02-09)
+- update Elixir to 1.11.4
+- updated Erlang to 23.2
+
 ## v2.5 (2020-08-06)
 - update Elixir to 1.10.4
 - updated Erlang to 23.0
