@@ -1,6 +1,7 @@
-FROM hexpm/elixir:1.11.1-erlang-23.1.1-ubuntu-focal-20200703
+FROM hexpm/elixir:1.12.0-erlang-24.0-ubuntu-focal-20210325
+
 LABEL maintainer="Univers Agency <mail@univers.agency>"
-ENV REFRESHED_AT 2020-10-25
+ENV REFRESHED_AT 2021-05-19
 
 RUN /usr/local/bin/mix local.hex --force && \
     /usr/local/bin/mix local.rebar --force
