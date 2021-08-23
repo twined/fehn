@@ -1,9 +1,9 @@
 FROM phusion/baseimage:0.11
 
 LABEL maintainer="Univers Agency <mail@univers.agency>"
-ENV REFRESHED_AT 2021-02-09
+ENV REFRESHED_AT 2021-08-23
 
-ENV ELIXIR_VERSION 1.11.3
+ENV ELIXIR_VERSION 1.12.2
 
 RUN echo /root > /etc/container_environment/HOME
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
