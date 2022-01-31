@@ -1,8 +1,8 @@
 ## Build and update hub image
 
 ```
-$ docker build -t twined/fehn:3.2 .
-$ docker push twined/fehn:3.2
+$ DOCKER_HOST=192.168.1.5 DOCKER_BUILDKIT=1 docker build -t twined/fehn:3.5 .
+$ DOCKER_HOST=192.168.1.5 DOCKER_BUILDKIT=1 docker push twined/fehn:3.5
 ```
 
 ## Ubuntu versions
@@ -18,7 +18,7 @@ $ docker push twined/fehn:3.2
 
 ```
 
-FROM twined/fehn:3.2
+FROM --platform=linux/amd64 twined/fehn:3.5
 
 LABEL maintainer="Univers Agency <mail@univers.agency>"
 
