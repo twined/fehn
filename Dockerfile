@@ -1,7 +1,7 @@
 FROM phusion/baseimage:0.11
 
 LABEL maintainer="Univers Agency <mail@univers.agency>"
-ENV REFRESHED_AT 2021-08-23
+ENV REFRESHED_AT 2022-09-19
 
 ENV ELIXIR_VERSION 1.12.2
 
@@ -21,8 +21,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN echo "deb http://packages.erlang-solutions.com/ubuntu trusty contrib" >> /etc/apt/sources.list && \
     apt-key adv --fetch-keys http://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc && \
-    apt-get -qq update && apt-get install -y \
-    esl-erlang \
+    apt-get -qq update && apt list -a esl-erlang && apt-get install -y \
+    esl-erlang=1:23.3.4.5-1 \
     git \
     unzip \
     build-essential \
