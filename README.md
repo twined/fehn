@@ -1,8 +1,8 @@
 ## Build and update hub image
 
 ```
-$ DOCKER_HOST=trashcan DOCKER_BUILDKIT=1 docker build -t twined/fehn:3.7 .
-$ DOCKER_HOST=trashcan DOCKER_BUILDKIT=1 docker push twined/fehn:3.7
+$ DOCKER_HOST=trashcan DOCKER_BUILDKIT=1 docker build -t twined/fehn:3.8 .
+$ DOCKER_HOST=trashcan DOCKER_BUILDKIT=1 docker push twined/fehn:3.8
 ```
 
 ## Ubuntu versions
@@ -18,7 +18,7 @@ $ DOCKER_HOST=trashcan DOCKER_BUILDKIT=1 docker push twined/fehn:3.7
 
 ```
 
-FROM --platform=linux/amd64 twined/fehn:3.7
+FROM --platform=linux/amd64 twined/fehn:3.8
 
 LABEL maintainer="Univers Agency <mail@univers.agency>"
 
