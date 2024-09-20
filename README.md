@@ -1,8 +1,8 @@
 ## Build and update hub image
 
 ```
-$ DOCKER_HOST=trashcan DOCKER_BUILDKIT=1 docker build -t twined/fehn:3.10 .
-$ DOCKER_HOST=trashcan DOCKER_BUILDKIT=1 docker push twined/fehn:3.10
+$ DOCKER_HOST=trashcan DOCKER_BUILDKIT=1 docker build -t twined/fehn:4.0 .
+$ DOCKER_HOST=trashcan DOCKER_BUILDKIT=1 docker push twined/fehn:4.0
 ```
 
 ## Ubuntu versions
@@ -12,13 +12,14 @@ $ DOCKER_HOST=trashcan DOCKER_BUILDKIT=1 docker push twined/fehn:3.10
 1.4 and up    - Ubuntu 16.04
 2.X           - Ubuntu 18.04
 3.X           - Ubuntu 20.04
+4.X           - Ubuntu 24.04
 ```
 
 ## Example Dockerfile
 
 ```
 
-FROM --platform=linux/amd64 twined/fehn:3.10
+FROM --platform=linux/amd64 twined/fehn:4.0
 
 LABEL maintainer="Univers Agency <mail@univers.agency>"
 
@@ -44,6 +45,4 @@ COPY --from=backend_builder /opt/app/priv/static/ priv/static/
 
 RUN mix phx.digest
 RUN mix distillery.release
-
-
 ```
