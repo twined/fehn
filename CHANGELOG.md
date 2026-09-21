@@ -1,8 +1,17 @@
-## 4.0 (2024-20-09)
+## 4.1 (2026-09-21)
+
+- Ubuntu 24.04
+- Elixir 1.18.1
+- Erlang 27.2
+
+Prepared 2024-12-29 but never built, so it is published now under its original
+version number.
+
+## 4.0 (2024-09-20)
 
 - Ubuntu 24.04
 - Elixir 1.17.2
-- Erlang 27.0.1
+- Erlang 27.1
 
 ## 3.10 (2024-08-29)
 

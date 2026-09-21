@@ -1,9 +1,16 @@
 ## Build and update hub image
 
+The image is amd64, so build it on an amd64 host rather than an Apple Silicon
+laptop. Set `DOCKER_HOST` to whichever build machine you use — florist configs
+currently point at `manhattan`.
+
 ```
-$ DOCKER_HOST=trashcan DOCKER_BUILDKIT=1 docker build -t twined/fehn:4.0 .
-$ DOCKER_HOST=trashcan DOCKER_BUILDKIT=1 docker push twined/fehn:4.0
+$ DOCKER_HOST=manhattan DOCKER_BUILDKIT=1 docker build -t twined/fehn:4.1 .
+$ DOCKER_HOST=manhattan DOCKER_BUILDKIT=1 docker push twined/fehn:4.1
 ```
+
+Then bump the `FROM twined/fehn:<version>` line in each site's Dockerfile.
+Sites do not float on a tag, so a new image reaches nothing until they do.
 
 ## Ubuntu versions
 
@@ -19,7 +26,7 @@ $ DOCKER_HOST=trashcan DOCKER_BUILDKIT=1 docker push twined/fehn:4.0
 
 ```
 
-FROM --platform=linux/amd64 twined/fehn:4.0
+FROM --platform=linux/amd64 twined/fehn:4.1
 
 LABEL maintainer="Univers Agency <mail@univers.agency>"
 
