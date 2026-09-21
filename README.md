@@ -5,8 +5,8 @@ laptop. Set `DOCKER_HOST` to whichever build machine you use — florist configs
 currently point at `manhattan`.
 
 ```
-$ DOCKER_HOST=manhattan DOCKER_BUILDKIT=1 docker build -t twined/fehn:4.1 .
-$ DOCKER_HOST=manhattan DOCKER_BUILDKIT=1 docker push twined/fehn:4.1
+$ DOCKER_HOST=manhattan DOCKER_BUILDKIT=1 docker build -t twined/fehn:4.2 .
+$ DOCKER_HOST=manhattan DOCKER_BUILDKIT=1 docker push twined/fehn:4.2
 ```
 
 Then bump the `FROM twined/fehn:<version>` line in each site's Dockerfile.
@@ -26,7 +26,7 @@ Sites do not float on a tag, so a new image reaches nothing until they do.
 
 ```
 
-FROM --platform=linux/amd64 twined/fehn:4.1
+FROM --platform=linux/amd64 twined/fehn:4.2
 
 LABEL maintainer="Univers Agency <mail@univers.agency>"
 
