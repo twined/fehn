@@ -1,8 +1,8 @@
-## 4.2 (2026-10-05)
+## 4.2 (2026-10-17)
 
-- Ubuntu 24.04
+- Ubuntu 24.04 (noble-20260930.1)
 - Elixir 1.20.4
-- Erlang 28.5.0.7
+- Erlang 28.5.0.8
 
 Matches the toolchain sites pin in `.mise.toml`. Releases were still being
 compiled on the 4.0 image (Elixir 1.17.3), three minor versions behind

@@ -1,4 +1,4 @@
-FROM hexpm/elixir:1.20.4-erlang-28.5.0.7-ubuntu-noble-20260917
+FROM hexpm/elixir:1.20.4-erlang-28.5.0.8-ubuntu-noble-20260930.1
 
 LABEL maintainer="Univers Agency <mail@univers.agency>"
 ENV REFRESHED_AT 2024-09-20
