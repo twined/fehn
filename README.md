@@ -11,15 +11,19 @@ release the server runs. Each version comes in two variants:
 |---|---|---|---|---|
 | `4.2`, `4.2-noble` | 24.04 | 2.39 | 3.0 | Ubuntu 24.04 |
 | `4.2-jammy` | 22.04 | 2.35 | 3.0 | Ubuntu 22.04 |
+| `4.2-focal` | 20.04 | 2.31 | 1.1.1 | Ubuntu 20.04 |
 
-hexpm no longer publishes Ubuntu 20.04 (focal) images for current Elixir and
-Erlang, so there is no focal variant.
+`4.2-focal` lags: hexpm stopped publishing Ubuntu 20.04 images after Elixir
+1.19.5 and Erlang 28.4.3, so it carries those instead of 1.20.4 / 28.5.0.8, on
+hexpm's last focal snapshot (20250404). Move 20.04 servers to 22.04 or 24.04.
 
 ```
 $ DOCKER_HOST=manhattan DOCKER_BUILDKIT=1 docker build -t twined/fehn:4.2 -t twined/fehn:4.2-noble .
 $ DOCKER_HOST=manhattan DOCKER_BUILDKIT=1 docker build -t twined/fehn:4.2-jammy \
     --build-arg BASE=1.20.4-erlang-28.5.0.8-ubuntu-jammy-20260930 .
-$ for t in 4.2 4.2-noble 4.2-jammy; do DOCKER_HOST=manhattan docker push twined/fehn:$t; done
+$ DOCKER_HOST=manhattan DOCKER_BUILDKIT=1 docker build -t twined/fehn:4.2-focal \
+    --build-arg BASE=1.19.5-erlang-28.4.3-ubuntu-focal-20250404 .
+$ for t in 4.2 4.2-noble 4.2-jammy 4.2-focal; do DOCKER_HOST=manhattan docker push twined/fehn:$t; done
 ```
 
 Then bump the `FROM twined/fehn:<version>` line in each site's Dockerfile.
