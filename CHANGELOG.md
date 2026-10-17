@@ -6,6 +6,8 @@
 - Slimmer: only ca-certificates, git and build-essential, without
   recommended packages or apt lists (572 MB → 484 MB). Drops wget, unzip
   and sudo, which no site's Dockerfile uses.
+- Two variants: `4.2`/`4.2-noble` (Ubuntu 24.04) and `4.2-jammy` (Ubuntu
+  22.04, glibc 2.35, OpenSSL 3.0). Build on the server's Ubuntu release.
 
 Matches the toolchain sites pin in `.mise.toml`. Releases were still being
 compiled on the 4.0 image (Elixir 1.17.3), three minor versions behind
